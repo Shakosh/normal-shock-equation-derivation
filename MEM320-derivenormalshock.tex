@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[margin=0.1in]{geometry} % Set custom margins
+
+\usepackage{setspace} % Allows control of the line spacing
+\setstretch{1.5} % Set the line spacing factor
+
+% \newlength{\myspace}
+% \setlength{\myspace}{0.5cm} % Set the value of the variable
+% use '\vspace{\myspace}' to enact spacing with the above variable as desired
+
+\begin{document}
+
+Normal Shock Equation: ${M_2 }^2 = \frac{\frac{2}{\gamma -1}+{M_1 }^2 }{\frac{2\,{M_1 }^2 \,\gamma }{\gamma -1}-1} = f(\gamma, M_1) < 1.0$
+
+Continuity Equation: $\frac{M_1 \,p_1 }{\sqrt{T_1 }}=\frac{M_2 \,p_2 }{\sqrt{T_2 }}$
+
+Energy Equation: $T_1 \,{\left(\frac{{M_1 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}=T_2 \,{\left(\frac{{M_2 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}$
+
+Momentum Equation: $p_1 \,{\left(\gamma \,{M_1 }^2 +1\right)}=p_2 \,{\left(\gamma \,{M_2 }^2 +1\right)}$
+
+Divide Continuity Equation by Momentum Equation to remove $p_1$: $\frac{M_1 }{\sqrt{T_1 }\,{\left(\gamma \,{M_1 }^2 +1\right)}}=\frac{M_2 }{\sqrt{T_2 }\,{\left(\gamma \,{M_2 }^2 +1\right)}}$
+
+Multiply that by the square root of the Energy Equation, $\sqrt{T_1 \,{\left(\frac{{M_1 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}}=\sqrt{T_2 \,{\left(\frac{{M_2 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}}$ to get:
+
+$\frac{M_1 \,\sqrt{\frac{{M_1 }^2 \,{\left(\gamma -1\right)}}{2}+1}}{\gamma \,{M_1 }^2 +1}=\frac{M_2 \,\sqrt{\frac{{M_2 }^2 \,{\left(\gamma -1\right)}}{2}+1}}{\gamma \,{M_2 }^2 +1}$
+
+Now, we solve for $M_2^2$ in terms of $M_1^2$ and $\gamma$ as in the orginal Normal Shock Equation:
+
+Step 1: Cross Multiply:
+
+$M_1 \,\sqrt{\frac{{M_1 }^2 \,{\left(\gamma -1\right)}}{2}+1}\,{\left(\gamma \,{M_2 }^2 +1\right)}=M_2 \,\sqrt{\frac{{M_2 }^2 \,{\left(\gamma -1\right)}}{2}+1}\,{\left(\gamma \,{M_1 }^2 +1\right)}$
+
+Step 2: Square both sides:
+
+$M_1^2 \,{\left(\frac{{M_1 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}\,{\left(\gamma \,{M_2 }^2 +1\right)}^2=M_2^2 \,{\left(\frac{{M_2 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}\,{\left(\gamma \,{M_1 }^2 +1\right)}^2$
+
+Step 3: Expand the squares:
+
+$M_1^2 \,{\left(\frac{{M_1 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}\,{\left(\gamma^2 \,{M_2 }^4 +2\,\gamma \,{M_2 }^2 +1\right)}=M_2^2 \,{\left(\frac{{M_2 }^2 \,{\left(\gamma -1\right)}}{2}+1\right)}\,{\left(\gamma^2 \,{M_1 }^4 +2\,\gamma \,{M_1 }^2 +1\right)}$
+
+Step 4: Expand and Collect in terms of $M_2$:
+
+$M_2^2 (1 + 2 \gamma M_1^2 + \gamma^2 M_1^4) + M_2^4 \left(-\frac{1}{2} + \frac{\gamma}{2} - \gamma M_1^2 + \gamma^2 M_1^2 - \frac{1}{2} \gamma^2 M_1^4 + \frac{1}{2} \gamma^3 M_1^4\right) = M_1^2 - \frac{M_1^4}{2} + \frac{\gamma M_1^4}{2} + M_2^2 (2 \gamma M_1^2 - \gamma M_1^4 + \gamma^2 M_1^4) + M_2^4 (\gamma^2 M_1^2 - \frac{1}{2} \gamma^2 M_1^4 + \frac{1}{2} \gamma^3 M_1^4)$
+
+%$\frac{1}{2}\,{\left(\gamma -1\right)}\,{M_1 }^4 \,{M_2 }^2 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}$
+
+%$\frac{1}{2}\,{\left(\gamma -1\right)}\,{M_1 }^4 \,{M_2 }^2 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^2 \,{M_2 }^4 +M_1^2 \,{M_2 }^2 +\frac{1}{2}\,{M_1 }^4 \,{M_2 }^2 +\frac{1}{2}$
+
+Step 5: Move all terms to one side of the Equation:
+
+%$M_2^4 \left(-\frac{1}{2} + \frac{\gamma}{2} - \gamma M_1^2 + \gamma^2 M_1^2 - \frac{1}{2} \gamma^2 M_1^4 + \frac{1}{2} \gamma^3 M_1^4\right) + M_2^2 (1 + 2 \gamma M_1^2 + \gamma^2 M_1^4 - 2 \gamma M_1^4 + 2 \gamma^2 M_1^4) - M_1^2 + \frac{M_1^4}{2} - \frac{\gamma M_1^4}{2} - M_2^2 (2 \gamma M_1^2 - \gamma M_1^4 + \gamma^2 M_1^4) - M_2^4 (\gamma^2 M_1^2 - \frac{1}{2} \gamma^2 M_1^4 + \frac{1}{2} \gamma^3 M_1^4) = 0$
+
+$-M_1^2 + \frac{M_1^4}{2} - \frac{\gamma M_1^4}{2} + M_2^2 (1 + 2 \gamma M_1^2 + \gamma^2 M_1^4) - M_2^2 (2 \gamma M_1^2 - \gamma M_1^4 + \gamma^2 M_1^4)$
+
+$- M_2^4 (\gamma^2 M_1^2 - \frac{1}{2} \gamma^2 M_1^4 + \frac{1}{2} \gamma^3 M_1^4) + M_2^4 \left(-\frac{1}{2} + \frac{\gamma}{2} - \gamma M_1^2 + \gamma^2 M_1^2 - \frac{1}{2} \gamma^2 M_1^4 + \frac{1}{2} \gamma^3 M_1^4\right) = 0$
+
+Step 6: Expand and Collect in terms of $M_2$:
+
+%$M_2^2 (1 + 2 \gamma M_1^2 + \gamma^2 M_1^4 - 2 \gamma M_1^4 + 2 \gamma^2 M_1^4) - M_2^2 (2 \gamma M_1^2 - \gamma M_1^4 + \gamma^2 M_1^4)$
+
+$-M_1^2 + \frac{M_1^4}{2} - \left(\gamma \frac{M_1^4}{2}\right) + M_2^2 (\gamma M_1^4 + 1) + M_2^4 \left(-\frac{1}{2} + \frac{\gamma}{2} - \gamma M_1^2\right) = 0$
+
+Step 7: Factor into product with 3 terms:
+
+
+
+$\frac{1}{2} \left(M_1^2 - M_2^2\right) \left(-2 + M_2^2 - \gamma M_2^2 + M_1^2 - \gamma M_1^2 + 2 \gamma M_2^2 M_1^2\right) = 0$
+
+Step 8: Multiply both sides by 2 to remove $\frac{1}{2}$:
+
+$\left(M_1^2 - M_2^2\right) \left(-2 + M_2^2 - \gamma M_2^2 + M_1^2 - \gamma M_1^2 + 2 \gamma M_2^2 M_1^2\right) = 0$
+
+Step 9: Now there are 2 equations:
+
+$M_1^2 - M_2^2 = 0$ \quad and \quad $-2 + M_2^2 - \gamma M_2^2 + M_1^2 - \gamma M_1^2 + 2 \gamma M_2^2 M_1^2 = 0$
+
+Step 10: The first equation can be easily simplified:
+
+$M_2 = M_1$ \quad or \quad $M_2 = -M_1$
+
+Step 11: In the second equation, collect in terms of $M_2^2$:
+
+$M_2^2 (1 - \gamma + 2 \gamma M_1^2) + M_1^2 - \gamma M_1^2 - 2 = 0$
+
+Step 12: And then finish solving for $M_2^2$:
+
+$M_2^2 = \frac{2 - M_1^2 + \gamma M_1^2}{1 - \gamma + 2 \gamma M_1^2}$
+
+Step 13: Factor out $M_1^2$ in the numerator and $-1$ in the denominator:
+
+$M_2^2 = \frac{2 + M_1^2 (\gamma - 1)}{-1 (\gamma - 1) + 2 \gamma M_1^2}$
+
+Step 14: Multiply both the top and bottom by $\frac{1}{(\gamma - 1)}$ to get the Normal Shock Equation in its original format:
+
+${M_2 }^2 = \frac{\frac{2}{\gamma -1}+{M_1 }^2 }{\frac{2\,{M_1 }^2 \,\gamma }{\gamma -1}-1}$
+
+
+
+
+\end{document}
